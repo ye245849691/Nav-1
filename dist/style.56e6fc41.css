@@ -1,0 +1,219 @@
+/* css reset*/
+*{box-sizing: border-box;}
+*:before,*:after{box-sizing: border-box;}
+*{margin: 0;padding: 0;}
+ul,ol{list-style: none;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+ a{color:inherit;text-decoration: none;}
+ img{max-width: 100%;max-height: 100%;}
+/* style */
+body{background-color: rgb(238, 238, 238);}
+header,main{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.globalHeader .siteLogo{
+    margin-top:20px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.globalHeader .search{
+    display: flex;
+    justify-content: center;
+    padding: 5px 20px;
+    margin-bottom: 60px ;
+ }
+.globalHeader .search > input{
+    display: inline-block;
+    width: 100%;
+    height: 44px;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    border-color: #1188CB;
+    padding: 0 50px;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    background: url('search.91d05a3b.png') 20px center / 20px 20px no-repeat white;
+    color: rgb(117, 117, 117);
+    outline: 0;
+}
+.globalHeader .search > button{
+    white-space: nowrap;
+    background: #1188CB;
+    border-radius: 4px;
+    border: 1px solid #DDDDDD;
+    font-size: 16px;
+    padding:  0 24px;
+    color: #FFFFFF;
+}
+
+.globalMain{
+}
+.siteList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: -20px;
+
+}
+
+.siteList .site{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    border: 1px solid #DDDDDD;
+    padding: 10px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.siteList .site> .logo{
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+}
+.siteList .site> .link{
+    font-size: 14px;
+}
+.siteList .addButton{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    border: 1px solid #DDDDDD;
+    padding: 10px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.siteList .addButton .icon{
+    width: 64px;
+    height: 64px;
+}
+.site :hover{
+    background-color:rgba(32, 33, 36, 0.06);
+}
+.site:hover .list-more{
+    opacity: 1;
+}
+.list-more{
+    position: absolute;
+    right: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url('list_more.74fd47d6.png') 0 center / 30px 30px no-repeat;
+    opacity: 0;
+    transition: all 0.4s;
+    border:0;
+    cursor: default;
+}
+/* 弹窗处理*/
+.dlg-container{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255,0.8);
+}
+.msg-dlg{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 380px;
+    height: 260px;
+    padding: 10px 20px;
+    border: 1px solid rgb(199, 187, 187);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3), 0 4px 8px 3px rgba(0, 0, 0, .15);
+    background: #fff;
+}
+.dlg-form{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+.dlg-form label{
+    padding: 10px 0;
+    font-size: 10px;
+}
+.dlg-form input{
+    display: inline-block;
+    height: 34px;
+    background: rgb(241, 243, 244);
+    border-radius: 4px;
+    padding: 0 20px;
+    caret-color:rgb(26, 115, 232);;
+}
+.button-group{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.button-group button{
+    border: 1px solid rgb(218, 220, 224);;
+    padding: 5px 20px;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.button-group .finish-btn{
+    background: rgb(241, 243, 244);
+}
+.button-group .cancel-btn{
+    color: rgb(26, 115, 232);
+}
+.button-group .cancel-btn:hover{
+    background:rgb(210, 227, 252);
+    border-color: rgb(210, 227, 252);
+}
+.hide-dlg{
+    display: none;
+}
+/*手机适配*/
+@media (max-width: 500px){
+    .globalHeader .search{
+        margin-bottom: 20px ;
+    }
+    .site-list{
+        justify-content: center;
+        margin-left:auto;
+        margin-right: auto;
+    }
+    .list-more{
+        opacity: 1;
+    }
+}
+
+/*# sourceMappingURL=style.56e6fc41.css.map */

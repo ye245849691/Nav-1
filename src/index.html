@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>前航 - 前端导航网站</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+    <header class="globalHeader">
+      <div class="siteLogo">
+        <img src="./images/logo.png" width="200px" alt="" />
+      </div>
+      <form class="search" action="https://www.baidu.com/s">
+        <input name="wd" type="text" />
+        <button type="submit">搜索</button>
+      </form>
+    </header>
+    <main class="globalMain">
+      <ul class="siteList">
+        
+<!--        <li class="lastLi">-->
+<!--          <div class="addButton">-->
+<!--            <svg class="icon" aria-hidden="true">-->
+<!--              <use xlink:href="#iconadd"></use>-->
+<!--            </svg>-->
+<!--          </div>-->
+<!--        </li>-->
+      </ul>
+    </main>
+    <div class="dlg-container hide-dlg">
+      <div class="msg-dlg">
+        <div class="title">添加网址</div>
+        <form class="dlg-form" action="">
+          <label for="des">描述</label>
+          <input type="text" name="des" id="des">
+          <label for="url">网址</label>
+          <input type="text" name="url" id="url">
+          <div class="button-group">
+            <button type="button" class="delete-btn">删除</button>
+            <div>
+              <button type="button" class="cancel-btn">取消</button>
+              <button type="button" class="finish-btn">完成</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//at.alicdn.com/t/font_2262738_74glhzodzzw.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
